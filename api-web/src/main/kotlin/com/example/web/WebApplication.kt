@@ -20,18 +20,4 @@ fun main(args: Array<String>) {
 	//test1()
 }
 
-fun test1() {
-//	var result = RestTemplate().getForObject("http://localhost:8081/msg/", ArrayList::class.java)
-//	println(result)
-//
-	val mapper = ObjectMapper()
-	val msgstr:String? =
-		RestTemplate().getForObject("http://localhost:8081/msg/", String::class.java)
-	val msgs: List<Message> = mapper.readValue(msgstr, object : TypeReference<List<Message>>() {})
-	if(msgs!=null) {
-		println("got ${msgs.size} messages as follows:")
-		for (msg in msgs) {
-			println(msg)
-		}
-	}
-}
+
