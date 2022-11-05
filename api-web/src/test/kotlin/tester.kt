@@ -8,6 +8,9 @@ import org.springframework.web.client.RestTemplate
 import java.util.*
 import java.util.stream.Collectors
 
+/**
+ * example code of this post: https://www.bswen.com/2022/11/kotlin1.html
+ */
 
 class tester {
 }
